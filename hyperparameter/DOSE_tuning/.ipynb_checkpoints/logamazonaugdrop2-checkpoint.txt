@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/dose/DOSE/hyperparameter/dose_tuning.py", line 46, in <module>
+    main()
+  File "/home/dose/DOSE/hyperparameter/dose_tuning.py", line 36, in main
+    ndcg = fitness(params['lr'], params['l2_reg'], params['dropout'], params['aux_reg'])
+KeyError: 'lr'

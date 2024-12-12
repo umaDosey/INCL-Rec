@@ -1,0 +1,4 @@
+{'name': 'ProcessedDataset', 'path': 'data/Gowalla/1', 'device': device(type='cuda', index=1), 'neg_ratio': 4}
+init dataset ProcessedDataset
+{'name': 'DOSE_aug', 'embedding_size': 64, 'n_layers': 3, 'device': device(type='cuda', index=1), 'dropout': 0.3, 'feature_ratio': 1, 'aug_num': 500000, 'dataset': <dataset.ProcessedDataset object at 0x1510a3c88670>}
+611909852

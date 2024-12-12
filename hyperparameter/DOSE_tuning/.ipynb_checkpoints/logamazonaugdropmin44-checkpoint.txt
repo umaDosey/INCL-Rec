@@ -1,0 +1,6 @@
+{'name': 'ProcessedDataset', 'path': 'data/Gowalla/time', 'device': device(type='cuda')}
+init dataset ProcessedDataset
+{'name': 'DOSE_aug2', 'embedding_size': 64, 'n_layers': 3, 'device': device(type='cuda'), 'dropout': 0.3, 'feature_ratio': 1, 'aug_num': 200000, 'dataset': <dataset.ProcessedDataset object at 0x153cda70e3d0>}
+{'name': 'DOSEaugTrainer', 'optimizer': 'Adam', 'lr': 0.001, 'l2_reg': 0.0, 'contrastive_reg': 0.01, 'aux_reg': 0.001, 'device': device(type='cuda'), 'n_epochs': 1000, 'batch_size': 2048, 'dataloader_num_workers': 6, 'test_batch_size': 512, 'topks': [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100], 'dataset': <dataset.ProcessedDataset object at 0x153cda70e3d0>, 'model': DOSE_aug2(
+  (embedding): Embedding(70848, 64)
+)}

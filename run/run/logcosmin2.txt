@@ -1,0 +1,25 @@
+{'name': 'ProcessedDataset', 'path': 'data/ml-1m/1', 'device': device(type='cuda', index=1), 'neg_ratio': 4}
+init dataset ProcessedDataset
+{'name': 'DOSE_aug', 'embedding_size': 64, 'n_layers': 3, 'device': device(type='cuda', index=1), 'dropout': 0.3, 'feature_ratio': 1, 'aug_num': 500000, 'dataset': <dataset.ProcessedDataset object at 0x1528600c8f70>}
+11938060
+{'name': 'DOSEaugTrainer', 'optimizer': 'Adam', 'lr': 0.001, 'l2_reg': 0.0, 'contrastive_reg': 0.1, 'aux_reg': 0.001, 'device': device(type='cuda', index=1), 'n_epochs': 1000, 'batch_size': 2048, 'dataloader_num_workers': 6, 'test_batch_size': 512, 'topks': [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100], 'dataset': <dataset.ProcessedDataset object at 0x1528600c8f70>, 'model': DOSE_aug(
+  (embedding): Embedding(9995, 64)
+)}
+11938060
+Epoch 0/1000, Loss: 0.707791, Time: 43.699s
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/dose/DOSE/run/run.py", line 30, in <module>
+    main()
+  File "/home/dose/DOSE/run/run.py", line 23, in main
+    trainer.train(verbose=True, writer=writer)
+  File "/home/dose/DOSE/trainer.py", line 86, in train
+    results, metrics, prot_result = self.eval('val')
+  File "/home/dose/DOSE/trainer.py", line 173, in eval
+    metrics = self.calculate_metrics(eval_data, rec_items)
+  File "/home/dose/DOSE/trainer.py", line 120, in calculate_metrics
+    if rec_items[user, item_idx] in eval_data[user]:
+IndexError: list index out of range

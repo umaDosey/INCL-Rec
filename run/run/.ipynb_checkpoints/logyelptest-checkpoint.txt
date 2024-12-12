@@ -1,0 +1,23 @@
+{'name': 'ProcessedDataset', 'path': 'data/Gowalla/1', 'device': device(type='cuda')}
+init dataset ProcessedDataset
+{'name': 'IDCF_LGCN', 'embedding_size': 64, 'n_layers': 3, 'n_headers': 4, 'lgcn_path': 'lgcn.pth', 'device': device(type='cuda'), 'dataset': <dataset.ProcessedDataset object at 0x1510693ddca0>}
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/dose/DOSE/run/run.py", line 30, in <module>
+    main()
+  File "/home/dose/DOSE/run/run.py", line 21, in main
+    model = get_model(model_config, dataset) # modelのクラウス
+  File "/home/dose/DOSE/model.py", line 23, in get_model
+    model = model(config)
+  File "/home/dose/DOSE/model.py", line 1106, in __init__
+    self.embedding.weight.data = torch.load(lgcn_path, map_location=self.device)['embedding.weight']
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'lgcn.pth'

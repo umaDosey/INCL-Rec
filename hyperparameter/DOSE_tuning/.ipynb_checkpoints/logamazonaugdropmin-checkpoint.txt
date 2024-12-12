@@ -1,0 +1,25 @@
+{'name': 'ProcessedDataset', 'path': 'data/Gowalla/time', 'device': device(type='cuda')}
+init dataset ProcessedDataset
+{'name': 'DOSE_drop', 'embedding_size': 64, 'n_layers': 3, 'device': device(type='cuda'), 'dropout': 0.3, 'feature_ratio': 1, 'aug_num': 0.01, 'dataset': <dataset.ProcessedDataset object at 0x150eec6d9dc0>}
+611909852
+{'name': 'DOSEaugTrainer', 'optimizer': 'Adam', 'lr': 0.001, 'l2_reg': 0.0, 'contrastive_reg': 0.001, 'aux_reg': 200000, 'device': device(type='cuda'), 'n_epochs': 1000, 'batch_size': 2048, 'dataloader_num_workers': 6, 'test_batch_size': 512, 'topks': [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100], 'dataset': <dataset.ProcessedDataset object at 0x150eec6d9dc0>, 'model': DOSE_drop(
+  (embedding): Embedding(70848, 64)
+)}
+Traceback (most recent call last):
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/dose/DOSE/hyperparameter/dose_tuning.py", line 181, in <module>
+    main()
+  File "/home/dose/DOSE/hyperparameter/dose_tuning.py", line 137, in main
+    ndcg = fitness3(params['aug_num'], params['contrastive_reg'], params['aux_reg'])
+  File "/home/dose/DOSE/hyperparameter/dose_tuning.py", line 59, in fitness3
+    return trainer.train(verbose=True)
+  File "/home/dose/DOSE/trainer.py", line 72, in train
+    loss = self.train_one_epoch()
+  File "/home/dose/DOSE/trainer.py", line 303, in train_one_epoch
+    self.model.norm_aug_adj = self.model.generate_aug_graph(self.config['dataset'])
+  File "/home/user/anaconda3/envs/dose/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1207, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'DOSE_drop' object has no attribute 'generate_aug_graph'
