@@ -3,12 +3,12 @@
 This is our official implementation for these papers:
 
 Yuma Dose, Shuichiro Haruta, and Takahiro Hara
-"A Graph-Based Recommendation Model Using Contrastive Learning for Inductive Scenario"
-Proceedings of IEEE International Conference on Machine Learning and Applications (ICMLA), pages 174-181, 2023.
+"A Graph-Based Recommendation Model Using Contrastive Learning for Inductive Scenario"　　
+Proceedings of IEEE International Conference on Machine Learning and Applications (ICMLA), pages 174-181, 2023.　　
 
-Yuma Dose, Shuichiro Haruta, and Takahiro Hara
-"INCL: A Graph-based Recommendation Model Using Contrastive Learning for Inductive Scenario"
-情報処理学会論文誌, volume 65, number 11, pages 1-9, November 2024.
+Yuma Dose, Shuichiro Haruta, and Takahiro Hara　　
+"INCL: A Graph-based Recommendation Model Using Contrastive Learning for Inductive Scenario"　　
+情報処理学会論文誌, volume 65, number 11, pages 1-9, November 2024.  
 
 ## Environment
 
