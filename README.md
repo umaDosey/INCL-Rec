@@ -1,6 +1,6 @@
 # INCL: Inductive Contrastive Learning for CF
 
-This is our official implementation for the paper:
+This is our official implementation for these papers:
 
 Yuma Dose, Shuichiro Haruta, and Takahiro Hara
 "A Graph-Based Recommendation Model Using Contrastive Learning for Inductive Scenario"
@@ -55,12 +55,4 @@ python -u -m run.run
 python -u -m run.dropit.igcn_dropit
 python -u -m run.dropui.igcn_dropui
 ```
-**We provide the implemented codes of all baseline methods in an unified framework**.
 
-To run diffrent baseline methods in the transductive setting, you can change the this code **dataset_config, model_config, trainer_config = config[2]** with different config indices in run/run.py.
-
-To run diffrent baseline methods in inductive settings, you can use their corresponding scripts like **python -u -m run.dropui.lgcn_dropui**.
-
-To use different dataset splits, you can change the this code **dataset_config['path'] = dataset_config['path'][:-4] + str(1)** with different split indices.
-
-The hyperparameters of all methods can be easily changed in config.py.
