@@ -8,7 +8,7 @@ Proceedings of IEEE International Conference on Machine Learning and Application
 
 Yuma Dose, Shuichiro Haruta, and Takahiro Hara  
 "INCL: A Graph-based Recommendation Model Using Contrastive Learning for Inductive Scenario"  
-情報処理学会論文誌, volume 65, number 11, pages 1-9, November 2024.  
+Journal of Information Processing, volume 65, number 11, pages 1-9, November 2024.  
 
 ## Environment
 
